@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Banco</title>
+</head>
+<body>
+    <div id="conteiner">
+        <h1>Meu Banco</h1>
+        <div id="conteudo">
+            <form id="tipodeconta">
+                <label for="corrente"><h2>Qual o tipo de conta gostaria de abrir?</h2></label><br>
+                <input type="radio" id="corrente" name="tipo_conta" value="corrente">
+                <label for="corrente">corrente</label> 
+                <input type="radio" id="poupanca" name="tipo_conta" value="poupanca">
+                <label for="poupanca">poupanca</label><br>
+            </form>
+            <form>
+                <label for="deposito"><h3>Deposito</h3></label>
+                <label for="deposito">R$</label>
+                <input type="number" name="depostito" id="deposito"><br><br><br>
+                
+                <label for="gastou"><h3>Gastou</h3></label><br><br>
+                <label for="gastou">R$</label>
+                <input type="number" name="gastou" id="gastou">
+                <label for="ondegastou">Em</label>
+                    <input list="ondegastou">
+                    <datalist id="ondegastou">
+                        <option value="Mercado">
+                        <option value="Restaurante">
+                        <option value="Cinema">
+                        <option value="Show">
+                        <option value="Farmacia">
+                        <option value="Outro"></option>
+                    </datalist>                    
+            </form>
+            <label for="extrato"><h2>Extrato</h2></label><br>
+            <textarea name="extrato" id="extrato" cols="50" rows="10"></textarea>
+        </div>
+    </div>
+</body>
+</html>
