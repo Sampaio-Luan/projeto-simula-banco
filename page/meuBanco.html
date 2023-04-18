@@ -16,13 +16,14 @@
                 <label for="corrente">corrente</label> 
                 <input type="radio" id="poupanca" name="tipo_conta" value="poupanca">
                 <label for="poupanca">poupanca</label><br>
+                <p><input type="button" value="Abrir Conta"></p>
             </form>
             <form>
                 <label for="deposito"><h3>Deposito</h3></label>
                 <label for="deposito">R$</label>
-                <input type="number" name="depostito" id="deposito"><br><br><br>
-                
-                <label for="gastou"><h3>Gastou</h3></label><br><br>
+                <input type="number" name="deposito" id="deposito">
+                <p><input type="button" value="Depositar"></p>
+                <label for="gastou"><h3>Gastou</h3></label>
                 <label for="gastou">R$</label>
                 <input type="number" name="gastou" id="gastou">
                 <label for="ondegastou">Em</label>
@@ -34,10 +35,13 @@
                         <option value="Show">
                         <option value="Farmacia">
                         <option value="Outro"></option>
-                    </datalist>                    
+                    </datalist>   
+                <p><input type="button" value="Gastar"></p>                 
             </form>
+            
             <label for="extrato"><h2>Extrato</h2></label><br>
             <textarea name="extrato" id="extrato" cols="50" rows="10"></textarea>
+            <p><input type="button" value="Extrato"></p>
         </div>
     </div>
 </body>
