@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/estilo.css">
     <title>Meu Banco</title>
 </head>
 <body>
-    <div id="conteiner">
+    <div id="container">
         <h1>Meu Banco</h1>
         <div id="conteudo">
             <form id="tipodeconta">
@@ -38,10 +39,12 @@
                     </datalist>   
                 <p><input type="button" value="Gastar"></p>                 
             </form>
+            <form>
+                <label for="extrato"><h2>Extrato</h2></label><br>
+                <textarea name="extrato" id="extrato" cols="50" rows="10"></textarea>
+                <p><input type="button" value="Extrato"></p>
+            </form>
             
-            <label for="extrato"><h2>Extrato</h2></label><br>
-            <textarea name="extrato" id="extrato" cols="50" rows="10"></textarea>
-            <p><input type="button" value="Extrato"></p>
         </div>
     </div>
 </body>
