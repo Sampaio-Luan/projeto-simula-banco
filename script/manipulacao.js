@@ -1,19 +1,3 @@
-
-function abrirconta()
-{
-    window.document.getElementById("form_saldo").style.display="block"
-    window.document.getElementById("tranzacoes").style.display="block";
-    window.document.getElementById("tipodeconta").style.display="none";
-    window.document.getElementById("saldo").innerHTML = 50;
-    
-}
-
-function extrato(){
-    let a = window.document.getElementById("areaextrato");
-    a.style.display="block";
-    a.style.background="rgba(158, 9, 9, 0.63)";
-}
-
 function modo(){
     document.body.style.backgroundColor = 'aliceblue';
     document.getElementById("conteudo").style.color = 'black';
@@ -21,31 +5,53 @@ function modo(){
 
 }
 
-function saldo(tipo){
+function abrirconta()
+{
+    window.document.getElementById("form_saldo").style.display="block"
+    window.document.getElementById("tranzacoes").style.display="block";
+    window.document.getElementById("tipodeconta").style.display="none";
+    
+}
 
-    var valor;
-    var s = document.getElementById("saldo");
-    var saldo = parseInt(s.value);
+var saldo = 50;
+
+function novoSaldo(tipo){
+
+    let valor;
 
     if(tipo == 1)//deposito
     {
-        var deposito = window.document.getElementById("deposito");
-        var valor = parseInt(deposito.value);
+        let deposito = window.document.getElementById("deposito");
+        valor = parseInt(deposito.value);
         saldo = saldo + valor;
     }
     if(tipo == 2)//gasto
     {
-        var gastar = window.document.getElementById("gastou");
+        let gastar = window.document.getElementById("gastou");
         valor = parseInt(gastar.value);
-        saldo = saldo - valor;
+        
+        if(valor > saldo)
+        {
+            alert("Saldo atual não permite esse gasto \n Seu saldo é de R$" + saldo + ",00");
+        }
+        else
+        {
+            saldo = saldo - valor;
+        }
     }
     
-    window.document.getElementById("saldo").innerHTML = saldo ;
+    window.document.getElementById("saldo").innerHTML = saldo;
     
 }
 
-function saldoNovo(saldo)
-{
-    var saldoN;
-    return saldo;
+function extrato(){
+    let a = window.document.getElementById("areaextrato");
+    let b = document.getElementById("extrato");
+    let ondegastou = document.getElementById("ondegastou");
+    let onde = ondegastou.value;
+    let gasto = document.getElementById("gastou");
+    a.style.display = "block";
+    a.style.background = "rgba(158, 9, 9, 0.63)";
+    b.innerHTML = "Saldo      ********   R$" + saldo + ",00\n" + onde + "  ******** - R$ " + gasto.value + ",00";
 }
+

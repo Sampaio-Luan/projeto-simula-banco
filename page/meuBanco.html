@@ -28,11 +28,11 @@
             <form id="tranzacoes">
                 <label for="deposito"><h3>Deposito</h3></label>
                 <label for="deposito">R$</label>
-                <input type="number" name="deposito" id="deposito" min="1">
-                <input type="button" value="Depositar"  onclick = "saldo(1)">
+                <input type="number" name="deposito" id="deposito" value="1" min="1">
+                <input type="button" value="Depositar"  onclick = "novoSaldo(1)">
                 <label for="gastou"><h3>Gastou</h3></label>
                 <label for="gastou">R$</label>
-                <input type="number" name="gastou" id="gastou" min="1">
+                <input type="number" name="gastou" id="gastou" value="1" min="1">
                 <label for="ondegastou">Em</label>
                     <input list="ondegastou">
                     <datalist id="ondegastou">
@@ -43,7 +43,7 @@
                         <option value="Farmacia">
                         <option value="Outro"></option>
                     </datalist>   
-                <p><input type="button" value="Gastar" onclick = "saldo(2)"></p>  
+                <p><input type="button" value="Gastar" onclick = "novoSaldo(2)"></p>  
                 <input type="button" value="Extrato" onclick = "extrato()">               
             </form>
             <form id="areaextrato">
