@@ -1,34 +1,45 @@
 @charset "UTF-8";
 
-*{
-    margin: 0;
 
-}
-
-body, html{
-    display: contents;
-    width: 90vw;
-    height: 80vh;
+body{
+    background-color: rgba(0, 0, 0, 0.904);
 }
 
 #container{
-    border: 10px solid black;
-    width: 60%;
-    height: 90%;
-    margin-top: 2%;
-    padding: 5%;
-    
+    color: azure;
+    border: 1px solid black;
+    width: 60vw;
+    height: 90vh;
+    margin: auto;
+    padding: 3%;
+
 }
 
 #conteudo{
     
-    border: 10px solid purple;
-    padding: 2%;
-    font-size: 1rem;  
-    margin: 20px; 
-    height: 90%;
+    border: 3px solid purple;
     width: 80%;
+    height: 70%;
+    margin: 5%;
+    padding: 5%;
+}
+
+form{
     
+    font-size: 13pt;
+    border:3px solid red;
+    margin: 10px;
+    padding: 3%;
+    text-align: center;
+    width: 90%;
+    height: auto;
+    
+}
+
+textarea{
+    width: 80%;
+    height: auto;
+
 }
 
 input{
@@ -36,18 +47,33 @@ input{
     
 }
 
-form{
-    
-    border: 10px solid rgb(255, 0, 0);
-    margin: 5%;
-    padding: 3%;
+h1,h2,h3,p{
+    text-align: center;
 }
 
-textarea{
-    width: 80%;
-    height: 30%;
+#tranzacoes, #areaextrato, #form_saldo{
+    display: none;
 }
-label{
-    padding: 3px;
-    margin: 2px;
+
+h1{
+    color: rgb(0, 119, 20);
+}
+
+#btnModo{
+    margin-bottom: 25px;
+    width: 90px;
+    height: 40px;
+    background-color: rgb(94, 94, 94);
+    font-size: 15px;
+    color: aliceblue;
+}
+#l{
+    font-size: 25px;
+    color:rgb(0, 255, 128);
+}
+
+#saldo, #p_saldo{
+    font-size: 25px;
+    font-style: oblique;
+    
 }

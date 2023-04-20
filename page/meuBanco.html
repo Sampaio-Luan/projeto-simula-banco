@@ -5,28 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/estilo.css">
+    <script type="text/javascript" src="../script/manipulacao.js"></script>
     <title>Meu Banco</title>
 </head>
 <body>
+    <input type="button" value="Modo Dark" onclick="modo()" id="btnModo">
     <div id="container">
-        <h1>Meu Banco</h1>
+        
         <div id="conteudo">
             <form id="tipodeconta">
-                <label for="corrente"><h2>Qual o tipo de conta gostaria de abrir?</h2></label><br>
+                <label for="corrente"><h2>Qual o tipo de conta gostaria de abrir?</h2></label>
                 <input type="radio" id="corrente" name="tipo_conta" value="corrente">
-                <label for="corrente">corrente</label> 
+                <label for="corrente">corrente</label><br>
                 <input type="radio" id="poupanca" name="tipo_conta" value="poupanca">
                 <label for="poupanca">poupanca</label><br>
-                <p><input type="button" value="Abrir Conta"></p>
+                <p><input type="button" value="Abrir Conta" onclick = "abrirconta()"></p>
             </form>
-            <form>
+            <form id="form_saldo">
+                <label id="l">Saldo</label>
+                <p id="p_saldo">R$<label id="saldo"></label>,00</p>
+            </form>
+            <form id="tranzacoes">
                 <label for="deposito"><h3>Deposito</h3></label>
                 <label for="deposito">R$</label>
-                <input type="number" name="deposito" id="deposito">
-                <p><input type="button" value="Depositar"></p>
+                <input type="number" name="deposito" id="deposito" min="1">
+                <input type="button" value="Depositar"  onclick = "saldo(1)">
                 <label for="gastou"><h3>Gastou</h3></label>
                 <label for="gastou">R$</label>
-                <input type="number" name="gastou" id="gastou">
+                <input type="number" name="gastou" id="gastou" min="1">
                 <label for="ondegastou">Em</label>
                     <input list="ondegastou">
                     <datalist id="ondegastou">
@@ -37,12 +43,13 @@
                         <option value="Farmacia">
                         <option value="Outro"></option>
                     </datalist>   
-                <p><input type="button" value="Gastar"></p>                 
+                <p><input type="button" value="Gastar" onclick = "saldo(2)"></p>  
+                <input type="button" value="Extrato" onclick = "extrato()">               
             </form>
-            <form>
+            <form id="areaextrato">
                 <label for="extrato"><h2>Extrato</h2></label><br>
                 <textarea name="extrato" id="extrato" cols="50" rows="10"></textarea>
-                <p><input type="button" value="Extrato"></p>
+                
             </form>
             
         </div>
