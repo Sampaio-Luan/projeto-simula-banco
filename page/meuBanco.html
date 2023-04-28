@@ -9,50 +9,53 @@
     <title>Meu Banco</title>
 </head>
 <body>
-    <input type="button" value="Modo Dark" onclick="modo()" id="btnModo">
-    <div id="container">
-        
-        <div id="conteudo">
-            <form id="tipodeconta">
-                <label for="corrente"><h2>Qual o tipo de conta gostaria de abrir?</h2></label>
-                <input type="radio" id="corrente" name="tipo_conta" value="corrente">
-                <label for="corrente">corrente</label><br>
-                <input type="radio" id="poupanca" name="tipo_conta" value="poupanca">
-                <label for="poupanca">poupanca</label><br>
+    
+    <div id="conteudo">
+    
+            <fieldset id="abrirConta">
+            <legend><h2>Abrir Conta</h2></legend>
+                <p><input type="radio" name="tipo" value="1" id="poupanca" required> <label for="poupanca"> Poupanca </label></p>
+                <p><input type="radio" name="tipo" value="2" id="corrente"> <label for="corrente"> Corrente </label></p>
                 <p><input type="button" value="Abrir Conta" onclick = "abrirconta()"></p>
-            </form>
-            <form id="form_saldo">
-                <label id="l">Saldo</label>
-                <p id="p_saldo">R$<label id="saldo"></label>,00</p>
-            </form>
-            <form id="tranzacoes">
-                <label for="deposito"><h3>Deposito</h3></label>
-                <label for="deposito">R$</label>
-                <input type="number" name="deposito" id="deposito" value="1" min="1">
-                <input type="button" value="Depositar"  onclick = "novoSaldo(1)">
-                <label for="gastou"><h3>Gastou</h3></label>
-                <label for="gastou">R$</label>
-                <input type="number" name="gastou" id="gastou" value="1" min="1">
-                <label for="ondegastou">Em</label>
-                    <input list="ondegastou">
-                    <datalist id="ondegastou">
-                        <option value="Mercado">
-                        <option value="Restaurante">
-                        <option value="Cinema">
-                        <option value="Show">
-                        <option value="Farmacia">
-                        <option value="Outro"></option>
-                    </datalist>   
-                <p><input type="button" value="Gastar" onclick = "novoSaldo(2)"></p>  
-                <input type="button" value="Extrato" onclick = "extrato()">               
-            </form>
-            <form id="areaextrato">
-                <label for="extrato"><h2>Extrato</h2></label><br>
-                <textarea name="extrato" id="extrato" cols="50" rows="10"></textarea>
+            </fieldset>
+
+            <fieldset id="areaSaldo">
+            <legend><h2>Saldo</h2></legend>
+                <p id="p_saldo"> R$ <label id="saldo"></label>,00</p>
+            </fieldset>
+
+            <fieldset id="transacoes" class="estilo">
+            <legend><h2>Transações</h2></legend>
+                <fieldset class="estilo">
+                <legend><h2>Depositar</h2></legend>
+                    <label for="deposito">R$</label>
+                    <input type="number" name="deposito" id="deposito" value="1" min="1">
+                    <input type="button" value="Depositar"  onclick = "operacoes(1)">
+                </fieldset>
                 
-            </form>
-            
-        </div>
+                <fieldset class="estilo" >
+                <legend><h2>Gastar</h2></legend>
+                    <label for="gastou">R$</label>
+                    <input type="number" name="gastou" id="gastou" value="1" min="1">
+                    <label for="listaOndeGastou">Em</label>
+                        <select id="listaOndeGastou">
+                            <option value="Mercado        ">Mercado</option>
+                            <option value="Restaurante    ">Restaurante</option>
+                            <option value="Cinema         ">Cinema</option>
+                            <option value="Show           ">Show</option>
+                            <option value="Farmacia       ">Farmacia</option>
+                            <option value="Outro          ">Outro</option>
+                        </select>   
+                    <p><input type="button" value="Gastar" onclick = "operacoes(2)"></p> 
+                </fieldset>
+
+                <p><input type="button" value="Extrato" onclick = "operacoes(3)"></p>             
+            </fieldset>
+
+            <fieldset id="areaExtrato">
+                <legend><h2>Extrato</h2></legend>
+                <p><textarea name="extrato" id="extrato" cols="50" rows="10"></textarea></p>    
+            </fieldset>
     </div>
 </body>
 </html>

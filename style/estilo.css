@@ -2,78 +2,90 @@
 
 
 body{
-    background-color: rgba(0, 0, 0, 0.904);
-}
-
-#container{
-    color: azure;
-    border: 1px solid black;
-    width: 60vw;
-    height: 90vh;
-    margin: auto;
-    padding: 3%;
-
+    margin: 0;
+    background:rgb(20, 20, 20);
 }
 
 #conteudo{
     
-    border: 3px solid purple;
     width: 80%;
     height: 70%;
     margin: 5%;
     padding: 5%;
-}
+    background-color: rgba(240, 248, 255, 0.26);
+    border-radius: 13px;
+    border: 1px solid rgba(255, 255, 255, 0.26);
+    box-shadow: 1px 1px 16px rgba(255, 255, 255, 0.37);
+    padding: 25px;
+    color: rgb(255, 255, 255);
 
-form{
-    
-    font-size: 13pt;
-    border:3px solid red;
-    margin: 10px;
-    padding: 3%;
-    text-align: center;
-    width: 90%;
-    height: auto;
-    
 }
 
 textarea{
-    width: 80%;
-    height: auto;
-
-}
-
-input{
-    width: 30%;
-    
+    width: 90%;
+    height: 20%; 
+    font-size: large; 
+    padding: 10px;
+    border-radius: 10px;
 }
 
 h1,h2,h3,p{
     text-align: center;
 }
 
-#tranzacoes, #areaextrato, #form_saldo{
+#transacoes,#areaExtrato , #areaSaldo{
     display: none;
 }
 
-h1{
-    color: rgb(0, 119, 20);
-}
-
-#btnModo{
-    margin-bottom: 25px;
-    width: 90px;
-    height: 40px;
-    background-color: rgb(94, 94, 94);
-    font-size: 15px;
-    color: aliceblue;
-}
-#l{
-    font-size: 25px;
-    color:rgb(0, 255, 128);
-}
-
-#saldo, #p_saldo{
-    font-size: 25px;
-    font-style: oblique;
+fieldset{
+    color: white;
+    text-shadow: 1px 1px 6px rgba(7, 7, 7, 0.514) ;
+    background-color: rgba(255, 255, 255, 0.034);
+    border-radius: 5px;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 1px 1px 16px rgba(255, 255, 255, 0.514);
     
+}
+
+input, #listaOndeGastou, #extrato{
+    font-size: large;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(240, 248, 255, 0.11);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 7px;
+    box-shadow: 1px 1px 6px rgba(255, 255, 255, 0.329);    
+}
+option{
+    color:rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.336);
+}
+input[type="number"] {
+    max-width: 40%;
+}
+#saldo, #p_saldo{
+    font-size: 40px;
+    color:rgb(152, 253, 0);
+}
+
+label{
+    font-size: 1.5em;
+}
+
+#areaSaldo{
+    color:rgb(152, 253, 0);
+    text-shadow: 1px 1px 6px rgba(7, 7, 7, 0.514) ;
+    background-color: rgba(255, 255, 255, 0.116);
+    border-radius: 5px;
+    border: 1px solid rgb(152, 253, 0);
+    box-shadow: 1px 1px 16px rgba(152, 253, 0, 0.384);
+}
+
+.estilo{
+    color:rgb(0, 195, 255);
+    text-shadow: 1px 1px 6px rgb(0, 68, 88) ;
+    background-color: rgba(255, 255, 255, 0.171);
+    border-radius: 5px;
+    border: 1px solid rgb(0, 195, 255);
+    box-shadow: 1px 1px 16px rgba(0, 195, 255);
 }
